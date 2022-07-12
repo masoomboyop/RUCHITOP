@@ -19,19 +19,19 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "♥️ Owner ♥️", url=f"https://t.me/DhrubaXD")
+                        "♥️ Owner ♥️", url=f"https://t.me/IND_HABIBI")
                ],
                 [
                     InlineKeyboardButton(
-                        "Repo ✨", url=f"https://github.com/LEGENDARY-OS/MUSIC-BOT")
+                        "Repo ✨", url=f"https://github.com/fullmojmasti/OP-MUSIC")
                ], 
                 [
                     InlineKeyboardButton(
-                        "👨‍💻 Support", url=f"https://t.me/LegendBot_AI")
+                        "👨‍💻 Support", url=f"FULL_ON_MOJJ_MASTI")
                ],
                 [
                     InlineKeyboardButton(
-                        "💝 Help 💝", url=f"https://t.me/LegendBot_OP")
+                        "💝 Help 💝", url=f"https://t.me/itszoney")
                 ]
                 
            ]
