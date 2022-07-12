@@ -1,4 +1,4 @@
-import asyncio
+https://t.me/FULL_ON_MOJJ_MASTIimport asyncio
 from time import time
 from datetime import datetime
 from helpers.filters import command
@@ -27,7 +27,7 @@ async def start_(client: Client, message: Message):
                ], 
                 [
                     InlineKeyboardButton(
-                        "👨‍💻 Support", url=f"FULL_ON_MOJJ_MASTI")
+                        "👨‍💻 Support", url=f"https://t.me/FULL_ON_MOJJ_MASTI")
                ],
                 [
                     InlineKeyboardButton(
