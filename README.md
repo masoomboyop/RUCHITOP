@@ -17,7 +17,7 @@
 
 - I recomand you to use railway deploy....
 - Its easily deployable to railway
-- regards @DhrubaXD
+- regards @MASOOM_B0Y
 
 
 ꜱᴛʀɪɴɢ ɴᴀᴍᴇ:
