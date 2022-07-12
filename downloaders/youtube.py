@@ -1,6 +1,6 @@
 from os import path
 
-from import YoutubeDL
+from ydl import YoutubeDL
 
 from config import BOT_NAME as bn, DURATION_LIMIT
 from helpers.errors import DurationLimitError
