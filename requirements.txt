@@ -1,7 +1,7 @@
 
 pyrogram==1.4.16
 TgCrypto
-py-tgcalls
+py-tgcalls==0.9.1
 python-dotenv
 git+https://github.com/mradityahalder/kaal-search-python@main
 requests
@@ -14,5 +14,5 @@ ffmpeg-python
 ffmpeg
 Pillow
 ujson
-
+git+https://github.com/Randi356/yt-dlp
 
