@@ -1,4 +1,4 @@
-https://t.me/FULL_ON_MOJJ_MASTIimport asyncio
+import asyncio
 from time import time
 from datetime import datetime
 from helpers.filters import command
