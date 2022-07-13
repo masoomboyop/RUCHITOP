@@ -254,21 +254,21 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="💝 Owner 💝",
-                            url=f"https://t.me/{master_user}"),
+                            url=f"https://t.me/itszoney"),
                             
                     InlineKeyboardButton(
                             text="👨‍💻 Assistant",
-                            url=f"https://t.me/{bot_username}")
+                            url=f"https://t.me/FULL_ON_MOJ")
                ],
                 [
                     InlineKeyboardButton(
                             text="Support",
-                            url=f"https://t.me/Official_K_LegendBot")
+                            url=f"https://t.me/FULL_ON_MOJJ_MASTI")
                ],
                [
                         InlineKeyboardButton(
                             text="🔰 Help 🔰",
-                            url=f"https://t.me/Legend_K_Userbot")
+                            url=f"https://t.me/MASOOM_B0Y")
                    
                 ]
             ]
