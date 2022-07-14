@@ -175,7 +175,7 @@ async def play(_, message: Message):
                             
                     InlineKeyboardButton(
                             text="👨‍💻 Assistant",
-                            url=f"https://t.me/FULL_ON_MOJ")
+                            url=f"https://t.me/SANKI_B0Y")
                ],
                 [
                     InlineKeyboardButton(
@@ -228,7 +228,7 @@ async def play(_, message: Message):
                             
                     InlineKeyboardButton(
                             text="👨‍💻 Assistant",
-                            url=f"https://t.me/FULL_ON_MOJ")
+                            url=f"https://t.me/SANKI_B0Y")
                ],
                 [
                     InlineKeyboardButton(
@@ -258,7 +258,7 @@ async def play(_, message: Message):
                             
                     InlineKeyboardButton(
                             text="👨‍💻 Assistant",
-                            url=f"https://t.me/FULL_ON_MOJ")
+                            url=f"https://t.me/SANKI_B0Y")
                ],
                 [
                     InlineKeyboardButton(
@@ -287,7 +287,7 @@ async def play(_, message: Message):
             return await lel.edit(
                 "✌𝐖𝐡𝐚𝐭'𝐒 𝐓𝐡𝐞 ❤️ 𝐒𝐨𝐧𝐠 🎸 𝐘𝐨𝐮 🎧 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️**"
             )
-        await lel.edit("🔎")
+        await lel.edit("Zoney Tapa Tap 😆😆")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -326,7 +326,7 @@ async def play(_, message: Message):
                             
                     InlineKeyboardButton(
                             text="👨‍💻 Assistant",
-                            url=f"https://t.me/FULL_ON_MOJ")
+                            url=f"https://t.me/SANKI_B0Y")
                ],
                 [
                     InlineKeyboardButton(
