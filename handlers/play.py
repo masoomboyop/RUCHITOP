@@ -32,7 +32,7 @@ themes = [
     "cutepie",
     "rabbit",
     "mastii",
-    "cutegirl",
+    "colourful",
     
 ]
 
