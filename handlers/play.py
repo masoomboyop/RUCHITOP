@@ -23,6 +23,19 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
+# plus
+chat_id = None
+useer = "NaN"
+
+themes = [
+    "love",
+    "cutepie",
+    "rabbit",
+    "mastii",
+    "cutegirl",
+    
+]
+
 bot_username = os.environ.get("BOT_NAME", None)
 
 
