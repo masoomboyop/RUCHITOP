@@ -54,11 +54,7 @@ keyboard = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴍᴇɴᴜ ✯",
-                callback_data=f"PanelMarkup {videoid}|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=f"https://t.me/Best_FriendsFor_Ever"
+                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=f"https://t.me/FULL_ON_MOJJ_MASTI"
             )
         ],
         [
