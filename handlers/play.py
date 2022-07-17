@@ -37,12 +37,6 @@ bot_username = os.environ.get("BOT_NAME", None)
 master_user = os.environ.get("MASTER_USERNAME", None)
 
 keyboard = InlineKeyboardMarkup(
-         [
-            InlineKeyboardButton(
-                text=f"{played} •{bar}• {dur}",
-                callback_data="GetTimer",
-            )
-        ],
         [
             InlineKeyboardButton(
                 text="▷",
