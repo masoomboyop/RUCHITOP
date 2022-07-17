@@ -57,11 +57,6 @@ keyboard = InlineKeyboardMarkup(
                 text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=f"https://t.me/FULL_ON_MOJJ_MASTI"
             )
         ],
-        [
-            InlineKeyboardButton(
-                text=_["CLOSEMENU_BUTTON"], callback_data="close"
-            )
-        ],
         )    
 
 
