@@ -27,14 +27,7 @@ from pytgcalls.types.input_stream import InputStream
 chat_id = None
 useer = "NaN"
 
-themes = [
-    "love",
-    "cutepie",
-    "rabbit",
-    "mastii",
-    "colourful",
-    
-]
+
 
 bot_username = os.environ.get("BOT_NAME", None)
 
