@@ -15,5 +15,6 @@ requests
 tgcrypto
 search_engine_parser
 wget
+random2
 git+https://github.com/IambikashHalder/Bgt_search@master
 git+https://github.com/IambikashHalder/Bgt-search-python@main

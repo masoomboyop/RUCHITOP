@@ -1,5 +1,6 @@
 import os
 from os import path
+import random
 from pyrogram import Client, filters
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
@@ -11,7 +12,7 @@ import aiohttp
 from youtube_search import YoutubeSearch
 import converter
 from downloaders import youtube
-from config import DURATION_LIMIT
+from config import BOT_NAME, DURATION_LIMIT
 from helpers.filters import command
 from helpers.decorators import errors
 from helpers.errors import DurationLimitError
@@ -22,7 +23,7 @@ from PIL import Image, ImageFont, ImageDraw
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
-
+from main import bot
 # plus
 chat_id = None
 useer = "NaN"
@@ -35,7 +36,30 @@ bot_username = os.environ.get("BOT_NAME", None)
 
 master_user = os.environ.get("MASTER_USERNAME", None)
 
-    
+keyboard = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                            text="💝 Owner 💝",
+                            url=f"https://t.me/IND_HABIBI"),
+                            
+                    InlineKeyboardButton(
+                            text="👨‍💻 Assistant",
+                            url=f"https://t.me/SANKI_B0Y")
+               ],
+                [
+                    InlineKeyboardButton(
+                            text="Support",
+                            url=f"https://t.me/FULL_ON_MOJJ_MASTI")
+               ],
+               [
+                        InlineKeyboardButton(
+                            text="🔰 Help 🔰",
+                            url=f"https://t.me/MASOOM_B0Y")
+                   
+                ]
+            ]
+        )    
 
 
 def transcode(filename):
@@ -65,6 +89,12 @@ def changeImageSize(maxWidth, maxHeight, image):
     newHeight = int(heightRatio * image.size[1])
     newImage = image.resize((newWidth, newHeight))
     return newImage
+thumb_choice = [
+"""etc/foreground.png""",
+"""etc/colourful.png""",
+"""etc/cutepie.png""",
+"""etc/rabbit.png"""
+        ]
 
 async def generate_cover(requested_by, title, views, duration, thumbnail):
     async with aiohttp.ClientSession() as session:
@@ -73,16 +103,16 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 f = await aiofiles.open("background.png", mode="wb")
                 await f.write(await resp.read())
                 await f.close()
+        
 
-
-    image1 = Image.open("etc/final.png")
-    image2 = Image.open("etc/{foreground.png")
+    image1 = Image.open("./background.png")
+    image2 = Image.open(random.choice(thumb_choice))
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
     image6 = image4.convert("RGBA")
     Image.alpha_composite(image5, image6).save("temp.png")
-    img = Image.open("etc/final.png")
+    img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
     draw.text((190, 550), f"**Title:** {title}", (255, 255, 255), font=font)
@@ -116,9 +146,11 @@ async def play(_, message: Message):
 
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
-
+    b = await bot.get_me()
+    bname = b.first_name
     try:
         user = await USER.get_me()
+        
     except:
         user.first_name = "Esport_MusicX"
     usar = user
@@ -172,30 +204,7 @@ async def play(_, message: Message):
         duration = round(audio.duration / 60)
         views = "Locally added"
 
-        keyboard = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                            text="💝 Owner 💝",
-                            url=f"https://t.me/IND_HABIBI"),
-                            
-                    InlineKeyboardButton(
-                            text="👨‍💻 Assistant",
-                            url=f"https://t.me/SANKI_B0Y")
-               ],
-                [
-                    InlineKeyboardButton(
-                            text="Support",
-                            url=f"https://t.me/FULL_ON_MOJJ_MASTI")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="🔰 Help 🔰",
-                            url=f"https://t.me/MASOOM_B0Y")
-                   
-                ]
-            ]
-        )
+ 
 
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -225,60 +234,14 @@ async def play(_, message: Message):
                 dur += int(dur_arr[i]) * secmul
                 secmul *= 60
 
-            keyboard = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                            text="💝 Owner 💝",
-                            url=f"https://t.me/IND_HABIBI"),
-                            
-                    InlineKeyboardButton(
-                            text="👨‍💻 Assistant",
-                            url=f"https://t.me/SANKI_B0Y")
-               ],
-                [
-                    InlineKeyboardButton(
-                            text="Support",
-                            url=f"https://t.me/FULL_ON_MOJJ_MASTI")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="🔰 Help 🔰",
-                            url=f"https://t.me/MASOOM_B0Y")
-                   
-                ]
-            ]
-        )
+     
 
         except Exception as e:
             title = "NaN"
             thumb_name = "https://telegra.ph/file/8c3abf591121615cdef42.jpg"
             duration = "NaN"
             views = "NaN"
-            keyboard = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                            text="💝 Owner 💝",
-                            url=f"https://t.me/IND_HABIBI"),
-                            
-                    InlineKeyboardButton(
-                            text="👨‍💻 Assistant",
-                            url=f"https://t.me/SANKI_B0Y")
-               ],
-                [
-                    InlineKeyboardButton(
-                            text="Support",
-                            url=f"https://t.me/FULL_ON_MOJJ_MASTI")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="🔰 Help 🔰",
-                            url=f"https://t.me/MASOOM_B0Y")
-                   
-                ]
-            ]
-        )
+     
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
@@ -293,7 +256,7 @@ async def play(_, message: Message):
             return await lel.edit(
                 "✌𝐖𝐡𝐚𝐭'𝐒 𝐓𝐡𝐞 ❤️ 𝐒𝐨𝐧𝐠 🎸 𝐘𝐨𝐮 🎧 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️**"
             )
-        await lel.edit("Zoney Tapa Tap 😆😆")
+        #await lel.edit("Zoney Tapa Tap 😆😆")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -318,35 +281,12 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**🌸° 𝐒𝐨𝐧𝐠 🎸 𝐍𝐨𝐭 😒 𝐅𝐨𝐮𝐧𝐝 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐏𝐫𝐨𝐛𝐥𝐞𝐦 ° 🥀.**"
+                f"**🌸° 𝐒𝐨𝐧𝐠 🎸 𝐍𝐨𝐭 😒 𝐅𝐨𝐮𝐧𝐝 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐏𝐫𝐨𝐛𝐥𝐞𝐦 ° 🥀.**\n\nError: {e}"
             )
             print(str(e))
             return
 
-        keyboard = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                            text="💝 Owner 💝",
-                            url=f"https://t.me/IND_HABIBI"),
-                            
-                    InlineKeyboardButton(
-                            text="👨‍💻 Assistant",
-                            url=f"https://t.me/SANKI_B0Y")
-               ],
-                [
-                    InlineKeyboardButton(
-                            text="Support",
-                            url=f"https://t.me/FULL_ON_MOJJ_MASTI")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="🔰 Help 🔰",
-                            url=f"https://t.me/MASOOM_B0Y")
-                   
-                ]
-            ]
-        )
+ 
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
@@ -364,7 +304,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="****❰ 𝐌𝐮𝐬𝐢𝐜'𝐗 ❘ 😈 ❱ 𝐒𝐨𝐧𝐠 ❤️ 𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧 💫🤟** {}**".format(position),
+            caption="****❰ {} ❘ 😈 ❱ 𝐒𝐨𝐧𝐠 ❤️ 𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧 💫🤟** {}**".format(bname, position),
             reply_markup=keyboard,
         )
     else:
@@ -381,8 +321,8 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**▶️ Legendary Music Bot Is Playin Now In** ➡️ `{}`\n**Title:** {}\n**Duration:** {}\nViews: {}".format(
-        message.chat.title, results[i]['title'], results[i]['duration'], results[i]['views']
+            caption="**▶️ {} Is Playing Now In** ➡️ `{}`\n**Title:** {}\n**Duration:** {}\nViews: {}".format(
+        bname, message.chat.title, results[i]['title'], results[i]['duration'], results[i]['views']
         ), )
 
     os.remove("final.png")
