@@ -35,28 +35,29 @@ bot_username = os.environ.get("BOT_NAME", None)
 
 
 master_user = os.environ.get("MASTER_USERNAME", None)
-
 keyboard = InlineKeyboardMarkup(
-        [
-            InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=f"https://t.me/FULL_ON_MOJJ_MASTI"
-            )
-        ],
+            [
+                [
+                    InlineKeyboardButton(
+                            text="💝 Owner 💝",
+                            url=f"https://t.me/IND_HABIBI"),
+
+                    InlineKeyboardButton(
+                            text="👨‍💻 Assistant",
+                            url=f"https://t.me/SANKI_B0Y")
+               ],
+                [
+                    InlineKeyboardButton(
+                            text="Support",
+                            url=f"https://t.me/FULL_ON_MOJJ_MASTI")
+               ],
+               [
+                        InlineKeyboardButton(
+                            text="🔰 Help 🔰",
+                            url=f"https://t.me/MASOOM_B0Y")
+
+                ]
+            ]
         )    
 
 
