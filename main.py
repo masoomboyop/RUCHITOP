@@ -15,4 +15,4 @@ bot = Bot(
 )
 
 bot.run()
-
+run()
