@@ -1,0 +1,61 @@
+{
+  "name": "KNAYA",
+  "logo": "https://te.legra.ph/file/aae987926ff967314cef7.jpg",
+  "description": "ɪ ᴀᴍ ᴀ ᴍᴜsɪᴄ ʙᴏᴛ, ɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ʏᴏᴜʀ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ.",
+  "keywords": ["music", "voicechat", "telegram", "Aaru"],
+  "repository": "https://github.com/CODER-XD143/Aaru_music",
+  "stack": "container",
+  "env": {
+    "SESSION_NAME": {
+      "description": "Pyrogram String Session of assistant account",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Get this value from @BotFather on TG",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "A name for your MusicPlayer Bot",
+      "required": "KNAYA",
+      "value": ""
+    },
+    "BOT_USERNAME": {
+      "description": "Username of your bot without @",
+      "required": false,
+      "value": "KNAYA_MUSIC_BOT"
+    },
+    "API_ID": {
+      "description": "Get this value from my.telegram.org/apps",
+      "required": false
+    },
+    "API_HASH": {
+      "description": "Get this value from from my.telegram.org/apps",
+      "required": false
+    },
+    "OWNER_USERNAME": {
+      "description": "Username of the person who will known as owner of the bot, without @",
+      "required": false,
+      "value": "its_Coder_xD"
+    },
+    "SUPPORT_GROUP": {
+      "description": "Username of the group where users will go and disturb you, without @",
+      "required": false,
+      "value": "ARCH_SUPPORTS"
+    },
+    "SUDO_USERS": {
+      "description": "User IDs of the users who will counted as admin everywhere (if more than one separate them by space).",
+      "required": true,
+      "value": "5150456401"
+    },
+    "PMPERMIT": {
+      "description": "If you want to notify users who pm to assistant account that it's the assistant account of your bot so don't spam messages there (ENABLE/DISABLE).",
+      "required": false,
+      "value": "ENABLE"
+    },
+    "DURATION_LIMIT": {
+      "description": "Max audio duration limit for downloads (minutes).",
+      "required": false,
+      "value": "160"
+    }
+  }
+}
