@@ -25,11 +25,7 @@ async def start_(client: Client, message: Message):
                 [
                     InlineKeyboardButton(
                         "•✯⭐ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ⭐✯•", url=f"https://t.me/KNAYA_MUSIC_BOT?startgroup=true"
-                       ),
-                  ],[
-                    InlineKeyboardButton(
-                        "•★🥀sᴏᴜʀᴄᴇ🥀★•", url=f"https://github.com/CODER-XD143/Aaru_Music"
-                    )
-                  ]   
+                      )
+                ]
             ]
     )
