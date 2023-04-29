@@ -30,6 +30,6 @@ async def start_(client: Client, message: Message):
                     InlineKeyboardButton(
                         "•★🥀sᴏᴜʀᴄᴇ🥀★•", url=f"https://github.com/CODER-XD143/Aaru_Music"
                     )
-                ]  ]   
+                  ]   
             ]
     )
